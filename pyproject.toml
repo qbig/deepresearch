@@ -1,0 +1,27 @@
+[project]
+name = "deepresearch"
+version = "0.1.0"
+description = "DeepResearch clone using LangGraph, OpenAI, and Tavily"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=0.2.0",
+    "langchain-openai>=0.2.0",
+    "langchain-tavily>=0.1.0",
+    "langsmith>=0.1.0",
+    "python-dotenv>=1.0.0",
+    "typing-extensions>=4.12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "ipython",
+    "pytest",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
